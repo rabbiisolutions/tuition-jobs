@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import backDropHandler from "./events/backDrop";
+import SideBar from "./components/sections/sideBar";
+import NavBar from "./components/sections/navBar";
+import MobileFooter from "./components/sections/footer";
+import SignUpModal from "./components/signUpModal";
+import DropDown from "./components/DropDown";
+import texts from "./constants/texts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <NavBar/>
+        <DropDown/>
+        <SideBar/>
+        <SignUpModal className="sign-up modal hidden" signUpText={texts.signUp}/>
+        <div className="page-mask hidden" onClick={e => backDropHandler(e)} />
+        <MobileFooter/>
+      </Router>
   );
 }
 

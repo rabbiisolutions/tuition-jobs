@@ -1,0 +1,30 @@
+$colors: (
+        mirage: #1B2531, aqua: #01FEFE, white: #FFFF, pampas: #EFEAE4, biscary: #203F6C, denim: #147CAC,
+        magenta: #DC00FE, vividViolet: #9F34AF, heliotrope: #DF31FA, silverChalice: #ACACAC, scorpion: #625E5D,
+);
+
+$pointer: pointer;
+$navBarHeight: 4.25em;
+$webkitRadius : 10em;
+$borderRadius: 10em;
+$font24: 1em;
+$desktop: 800px;
+$monitor: 1192px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
+    width: 100%;
+}
