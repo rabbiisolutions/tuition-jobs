@@ -1,6 +1,7 @@
 import React from "react";
 import texts from "../../../constants/texts";
 import mobileAccordion from "../../accordion";
+import AcademicTutors from "../sub/AcademicTutors";
 
 
 const name = 'sections-accordion';
@@ -11,7 +12,7 @@ const SectionsAccordion = () => {
         <div className={name} key={11}>
           {mobileAccordion.toggle(texts.academicTutors)}
           {
-
+            <AcademicTutors/>
           }
         </div>
         ,

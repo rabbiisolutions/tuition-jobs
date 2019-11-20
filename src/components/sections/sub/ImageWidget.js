@@ -1,18 +1,29 @@
 import React from "react";
+import ListItem from "../../listItems";
 
-const ImageWidget = (src, alt, title, description) => {
+
+const ImageWidget = (props) => {
   return (
       <div className="image-widget">
-        <div className="image">
-          <img src={src} alt={alt}/>
-        </div>
+        { props.src ? // add image if src is passed
+          <div className="image">
+            <img src={props.src} alt={props.alt}/>
+          </div>
+            : ''
+        }
         <div className="text">
             <div className="title">
-              {title}
+              {props.title}
             </div>
             <div className="description">
-              {description}
+              {props.description}
             </div>
+            { props.list ? // append list if only list is passed
+              <div className="list">
+                {ListItem(props.list)}
+              </div>
+                : ''
+            }
         </div>
       </div>
   )

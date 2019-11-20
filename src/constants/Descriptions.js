@@ -9,22 +9,24 @@ const high = {
 
 const international = {
   title: 'International Schools Systems', description: 'Qualified tutors for the following' +
-      ' international systems:', list: ['IGCSE', 'American System', 'IB etc']
+      ' international systems:',
+  list: [{key: '1', text: 'IGCSE'}, {key: '2', text: 'American System'}, {key: '3', text: 'IB etc'}]
 };
 
 const sports = {
   title: 'Sports and Games', description: 'Below are the sports we can provide tuition for:',
-  list: ['Chess', 'Skating', 'Swimming etc']
+  list: [{key: '1', text: 'Chess'}, {key: '2', text: 'Skating'}, {key: '3', text: 'Swimming etc'}]
 };
 
 const foreign = {
   title: 'Foreign Languages', description: 'We provide foreign language tutors for:',
-  list: ['German', 'Chinese', 'Latin', 'French etc']
+  list: [{key: '1', text: 'German'}, {key: '2', text: 'Chinese'}, {key: '3', text: 'Latin'}, {key: '4', text: 'French etc'}]
 };
 
 const hobbies = {
   title: 'Hobbies', description: 'We help develop interests and hobbies by providing tutors for:.',
-  list: ['Art', 'Photography', 'Music Instruments', 'DJ etc']
+  list: [{key: '1', text: 'Art'}, {key: '2', text: 'Photography'}, {key: '3', text: 'Music' +
+        ' Instruments'}, {key: '4', text: 'DJ etc'}]
 };
 
 
