@@ -5,7 +5,7 @@ import ImageWidget from "./ImageWidget";
 
 const SkillTutors = () => {
   return (
-      <section>
+      <section id="skill-tutors">
         <ImageWidget
             title={descriptions.sports.title}
             description={descriptions.sports.description}
