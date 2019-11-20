@@ -4,12 +4,10 @@ import Icon from "./icon";
 import downIcon from "../icons/down.svg";
 import upIcon from "../icons/up.svg";
 
-const panel = (data, bgClass, filter) => {
+const panel = (data) => {
   return (
-      <div className={"panel "+ bgClass}>
-        <div className={filter}>
+      <div className="panel">
         {data}
-        </div>
       </div>
   )
 };

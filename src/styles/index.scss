@@ -1,6 +1,7 @@
 $colors: (
         mirage: #1B2531, aqua: #01FEFE, white: #FFFF, pampas: #EFEAE4, biscary: #203F6C, denim: #147CAC,
         magenta: #DC00FE, vividViolet: #9F34AF, heliotrope: #DF31FA, silverChalice: #ACACAC, scorpion: #625E5D,
+        robinsEggBlue: #01d3d3, bluewood: #263246, dullMirage: rgba(27, 37, 49, 0.8)
 );
 
 $pointer: pointer;
@@ -10,6 +11,10 @@ $borderRadius: 10em;
 $font24: 1em;
 $desktop: 800px;
 $monitor: 1192px;
+
+@function color($name) {
+    @return map_get($colors, $name);
+}
 
 @mixin desktop {
     @media (min-width: #{$desktop}) {
@@ -27,4 +32,334 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
     width: 100%;
+
+
+    .nav-bar {
+        background-color: color(mirage);
+        height: $navBarHeight;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .nav {
+            display: none;
+
+            .nav-item {
+                display: inline-block;
+                text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                color: color(aqua);
+                padding: 15px 15px;
+                min-width: fit-content;
+                cursor: $pointer;
+                text-decoration: none;
+            }
+
+            .nav-item:hover {
+                background-color: color(bluewood);
+            }
+        }
+
+        @include desktop {
+            .nav {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .nav-item.active {
+                background-color: color(bluewood);
+            }
+        }
+
+        .logo {
+            cursor: $pointer;
+        }
+
+        button {
+            -webkit-border-radius: $webkitRadius;
+            border-radius: $borderRadius;
+            background-color: inherit;
+            color: color(aqua);
+            border: 0.2em solid color(aqua);
+            padding: .5em 2em;
+            cursor: $pointer;
+            font-size: $font24;
+        }
+
+        .toggle {
+            @include desktop {
+                display: none;
+            }
+        }
+
+        .toggle span{
+            fill: color(robinsEggBlue);
+            cursor: $pointer;
+        }
+    }
+
+    main {
+        background-color: color(pampas);
+        margin-top: $navBarHeight;
+
+        #banner {
+            display: none;
+            @include desktop {
+                display: block;
+            }
+        }
+
+        #tuition {
+            color: color(biscary);
+            font-weight: bold;
+            font-size: 1.875em;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        #lead {
+            font-size: .9em;
+            color: color(dullMirage);
+            text-align: center;
+        }
+    }
+
+    .our-services {
+        position: fixed;
+        z-index: 105;
+        top: 4.5em;
+        left: 36%;
+        padding: 10px 5px;
+        width: fit-content;
+        min-width: 100px;
+        height: auto;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        border: 1px solid;
+
+        .nav-sub-item {
+            display: block;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid;
+            color: color(azure);
+        }
+
+        .nav-sub-item:hover {
+            color: color(white);
+            background-color: color(bondiBlue);
+        }
+    }
+
+    footer {
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .9em;
+        padding: 20px 5px;
+        background: color(mirage);
+
+        @include desktop {
+            font-size: 1.1em;
+        }
+
+        .copyright {
+            color: color(vividViolet);
+        }
+
+        .company {
+            color: color(magenta);
+            font-size: 1.1em;
+        }
+
+    }
+
+    .side-bar {
+        background-color: color(bluewood);
+        width: 63%;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        top: $navBarHeight;
+        right: 0;
+        position: fixed;
+        height: 100%;
+        padding: 10px 0;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        @include desktop {
+            display: none;
+        }
+
+        .menu-title {
+            color: #A8A8A8;
+            font-size: 1.1em;
+            text-align: center;
+            display: block;
+        }
+
+        a.menu-item, .menu-sub-item {
+            display: block;
+            text-decoration: none;
+        }
+
+        .menu-sub-item {
+            color: #C0FFFF;
+            font-size: 1em;
+            padding: 15px 25px;
+        }
+
+        .menu-divider {
+            height: 2px;
+            color: #9A969B;
+            margin: 10px 30px;
+        }
+
+        .menu-item {
+            color: color(aqua);
+            padding: 20px 15px;
+            width: 100%;
+            cursor: $pointer;
+        }
+
+        .menu-item.active, .menu-sub-item.active, .menu-item:hover, .menu-sub-item:hover {
+            background-color: color(mirage);
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.page-mask {
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.sign-up.modal {
+    background-color: color(bluewood);
+    z-index: 1000;
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100% - 100px);
+    padding: 20px 0;
+    border-radius: 5px;
+
+    @include desktop {
+        max-width: 593px;
+    }
+
+    .sign-up-text {
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        color: color(darkGrey);
+        text-decoration: underline;
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+.sign-up.div {
+    background: rgba(3, 3, 3, 0.79);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1.5em 3.5em;
+    //margin-top: 50px;
+    border-radius: 5px;
+
+    .sign-up-text {
+        color: color(magenta);
+        text-decoration: underline;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+.sign-up {
+
+    .close-icon {
+        right: 10px;
+        top: 5px;
+        position: absolute;
+        color: white;
+        cursor: $pointer;
+    }
+
+    .user-title {
+        font-size: 1em;
+        color: color(white);
+        margin: 20px 0 20px 20px;
+
+        @include desktop {
+            margin: 20px 0 20px 50px;
+        }
+    }
+
+    hr {
+        border: 2px solid #9A969B;
+        margin: 10px 20px;
+    }
+
+    .clients-btn, .tutors-btn {
+        padding: .5em 1.5em;
+        display: inline-block;
+        box-shadow: 15px 25px 25px rgba(0, 0, 0, 0.25);
+        margin: 0 10px 15px 10px;
+        border: 0.2em solid;
+    }
+
+    .clients-btn {
+        background-color: color(magenta);
+        color: color(white);
+        border-color: color(mirage);
+        font-weight: bold;
+    }
+
+    .tutors-btn {
+        background-color: color(mirage);
+        color: color(magenta);
+        border-color: color(magenta);
+    }
+
+    #client-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tutor-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .msg {
+        margin-top: 20px;
+        color: color(white);
+        font-size: .8em;
+        text-align: center;
+    }
+}
+
+.btn-link {
+    -webkit-border-radius: $webkitRadius;
+    border-radius: $borderRadius;
+    cursor: $pointer;
+    box-shadow: 15px 25px 25px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
 }

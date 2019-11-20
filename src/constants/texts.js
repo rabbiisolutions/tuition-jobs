@@ -14,6 +14,10 @@ const menuItems = ['Home', 'Our Services', 'About Us', 'FAQs', 'Contact Us', 'Tr
 const ourServices = ['TeeCha'];
 const hidden = 'hidden';
 const dot = '⦁ ';
+const academicTutors = 'Academic Tutors';
+const skillTutors = 'Skill Tutors';
+const paymentOptions = 'Payment Options';
+const howToBe = 'How to be a Tutor';
 
 const texts = {
   teeCha: teeCha, homeTuition: homeTuition, homeTuitionAreas: homeTuitionAreas,
@@ -21,7 +25,8 @@ const texts = {
 
   signUpHow: signUpHow, getATutor: getATutor, beATutor: beATutor, dot: dot, signUp: signUp,
   safaricom: safaricom, telkom: telkom, menuTitle: menuTitle,
-  menuItems: menuItems, ourServices: ourServices, hidden: hidden
+  menuItems: menuItems, ourServices: ourServices, hidden: hidden, academicTutors: academicTutors,
+  skillTutors: skillTutors, paymentOptions: paymentOptions, howToBe: howToBe
 };
 
 export default texts;

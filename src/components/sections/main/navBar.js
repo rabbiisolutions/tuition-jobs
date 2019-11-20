@@ -1,12 +1,12 @@
 import React from "react";
-import Logo from "../logo";
-import Icon from "../icon";
-import toggle from "../../icons/list.svg"
-import Button from "../button";
-import texts from "../../constants/texts";
-import signUpHandler from "../../events/signUpModal";
-import menuToggle from "../../events/menuToggle";
-import overlayAction from "../../events/overlayActions";
+import Logo from "../../logo";
+import Icon from "../../icon";
+import toggle from "../../../icons/list.svg"
+import Button from "../../button";
+import texts from "../../../constants/texts";
+import signUpHandler from "../../../events/signUpModal";
+import menuToggle from "../../../events/menuToggle";
+import overlayAction from "../../../events/overlayActions";
 
 
 class NavBar extends React.Component {
