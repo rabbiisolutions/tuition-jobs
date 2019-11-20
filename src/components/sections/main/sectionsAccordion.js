@@ -2,6 +2,7 @@ import React from "react";
 import texts from "../../../constants/texts";
 import mobileAccordion from "../../accordion";
 import AcademicTutors from "../sub/AcademicTutors";
+import SkillTutors from "../sub/SkillTutors";
 
 
 const name = 'sections-accordion';
@@ -19,7 +20,7 @@ const SectionsAccordion = () => {
         <div className={name} key={12}>
           {mobileAccordion.toggle(texts.skillTutors)}
           {
-
+            <SkillTutors/>
           }
         </div>
         ,
