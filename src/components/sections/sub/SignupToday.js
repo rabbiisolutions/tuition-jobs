@@ -8,13 +8,13 @@ const SignUpToday = () => {
   return (
       <section>
         <div>{texts.howToBe}</div>
-        <CanvasWidget title={description.registration.title} paragraph={ListItem(description.registration.paragraph)}/>
+        <CanvasWidget title={description.registration.title} paragraph={ListItem(description.registration.paragraph)} step={1}/>
         <hr/>
-        <CanvasWidget title={description.screening.title} paragraph={description.screening.paragraph}/>
+        <CanvasWidget title={description.screening.title} paragraph={description.screening.paragraph} step={2}/>
         <hr/>
-        <CanvasWidget title={description.placement.title} paragraph={description.placement.paragraph}/>
+        <CanvasWidget title={description.placement.title} paragraph={description.placement.paragraph} step={3}/>
         <hr/>
-        <CanvasWidget title={description.evaluation.title} paragraph={description.evaluation.paragraph}/>
+        <CanvasWidget title={description.evaluation.title} paragraph={description.evaluation.paragraph} step={4}/>
       </section>
   );
 };

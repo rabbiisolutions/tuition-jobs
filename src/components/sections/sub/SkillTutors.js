@@ -10,14 +10,17 @@ const SkillTutors = () => {
             title={descriptions.sports.title}
             description={descriptions.sports.description}
             list={descriptions.sports.list}/>
+        <hr/>
         <ImageWidget
             title={descriptions.foreign.title}
             description={descriptions.foreign.description}
             list={descriptions.foreign.list}/>
+        <hr/>
         <ImageWidget
             title={descriptions.hobbies.title}
             description={descriptions.hobbies.description}
             list={descriptions.hobbies.list}/>
+        <hr/>
       </section>
   )
 };

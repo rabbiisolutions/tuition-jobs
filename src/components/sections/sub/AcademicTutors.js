@@ -9,9 +9,11 @@ const AcademicTutors = () => {
         <ImageWidget
             title={descriptions.primary.title}
             description={descriptions.primary.description}/>
+        <hr/>
         <ImageWidget
             title={descriptions.high.title}
             description={descriptions.high.description}/>
+        <hr/>
         <ImageWidget
             title={descriptions.international.title}
             description={descriptions.international.description}
