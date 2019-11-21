@@ -1,6 +1,6 @@
 import React from "react";
-import texts from "../../../constants/texts";
-import menuToggle from "../../../events/menuToggle";
+import texts from "../../constants/texts";
+import menuToggle from "../../events/menuToggle";
 
 
 class SideBar extends React.Component {

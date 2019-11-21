@@ -7,7 +7,8 @@
     "react-app-polyfill": "^1.0.3",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
-    "react-svg": "^10.0.25"
+    "react-svg": "^10.0.25",
+    "konva": "4.0.18"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,6 +33,8 @@
     ]
   },
   "devDependencies": {
+    "react-konva": "^16.10.1-0",
+    "react-responsive-canvas": "^1.0.2",
     "react-router-dom": "^5.1.2"
   }
 }

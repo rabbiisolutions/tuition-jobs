@@ -1,6 +1,6 @@
 import React from "react";
 import descriptions from "../../../constants/Descriptions";
-import ImageWidget from "./ImageWidget";
+import ImageWidget from "../widgets/ImageWidget";
 
 
 const AcademicTutors = () => {

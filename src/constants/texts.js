@@ -18,6 +18,7 @@ const academicTutors = 'Academic Tutors';
 const skillTutors = 'Skill Tutors';
 const paymentOptions = 'Payment Options';
 const howToBe = 'How to be a Tutor';
+const signUpToday = 'Sign Up Today';
 const tuitionAreas = 'Tuition Areas';
 const category = 'Category';
 const tuitionTypes = 'Tuition Types';
@@ -34,7 +35,7 @@ const texts = {
   menuItems: menuItems, ourServices: ourServices, hidden: hidden, academicTutors: academicTutors,
   skillTutors: skillTutors, paymentOptions: paymentOptions, howToBe: howToBe, tuitionAreas: tuitionAreas,
   tuitionTypes: tuitionTypes, numOfStudents: numOfStudents, paymentPerClass: paymentPerClass,
-  category: category, signUpLong: signUpLong
+  category: category, signUpLong: signUpLong, signUpToday: signUpToday
 };
 
 export default texts;
