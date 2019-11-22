@@ -1,7 +1,8 @@
 $colors: (
-        mirage: #1B2531, aqua: #01FEFE, white: #FFFF, pampas: #EFEAE4, biscary: #203F6C, denim: #147CAC,
+        mirage: #1B2531, aqua: #01FEFE, white: #FFFFFF, pampas: #EFEAE4, biscary: #203F6C, denim: #147CAC,
         magenta: #DC00FE, vividViolet: #9F34AF, heliotrope: #DF31FA, silverChalice: #ACACAC, scorpion: #625E5D,
-        robinsEggBlue: #01d3d3, bluewood: #263246, dullMirage: rgba(27, 37, 49, 0.8)
+        robinsEggBlue: #01d3d3, bluewood: #263246, dullMirage: rgba(27, 37, 49, 0.8), deepSeaGreen: #094967,
+        timberwolf: #D4D1CC
 );
 
 $pointer: pointer;
@@ -32,7 +33,6 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Nunito", sans-serif;
     width: 100%;
-
 
     .nav-bar {
         background-color: color(mirage);
@@ -105,7 +105,9 @@ body {
 
     main {
         background-color: color(pampas);
-        margin-top: $navBarHeight;
+        padding-top: $navBarHeight;
+        display: flex;
+        flex-direction: column;
 
         #banner {
             display: none;
@@ -120,12 +122,135 @@ body {
             font-size: 1.875em;
             text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
+            margin: .5em 0;
+
         }
 
         #lead {
             font-size: .9em;
             color: color(dullMirage);
             text-align: center;
+            margin: .5em 0;
+        }
+
+        .sections-accordion {
+            color: color(mirage);
+            font-size: 1.25em;
+            padding: 5px 10px;
+
+            .section-toggle {
+                background: color(scorpion);
+                width: inherit;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 5px;
+                cursor: pointer;
+                color: color(pampas);
+
+                .down span, .up span {
+                    fill: color(pampas);
+                }
+            }
+
+            .section-toggle.shown, .section-toggle:hover {
+                background: color(denim);
+            }
+
+            .panel {
+                padding: 10px;
+                font-size: .8em;
+
+                .title {
+                    color: color(deepSeaGreen);
+                }
+
+                hr {
+                    border: 2px solid color(white);
+                    width: 95%;
+                }
+
+                .tag-line {
+                    font-weight: 300;
+                    font-size: .8em;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    #table {
+        margin: 10px;
+        background-color: color(white);
+        padding: 10px;
+        width: fit-content;
+
+        #titles {
+            display: flex;
+            grid-template-columns: auto auto auto auto auto;
+            column-gap: 17px;
+            //overflow-x: scroll;
+
+            span {
+                display: inline-block;
+            }
+        }
+    }
+
+    #signup-today {
+        .title {
+            font-size: 1.14em;
+        }
+
+        .sub-title {
+            margin: 10px 0 0 50px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 15px;
+
+            .step {
+                margin: 15px 0 15px 10px;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                font-size: 32px;
+                color: color(pampas);
+                line-height: 75px;
+                text-align: center;
+                background: color(denim);
+            }
+
+            .paragraph {
+                margin-top: 10px;
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+
+    #payment-options {
+        overflow-x: scroll;
+        margin-bottom: 20px;
+
+        hr {
+            border: 2px solid color(mirage);
+            width: 100%;
+        }
+
+        .help {
+            color: color(dullMirage);
+            font-weight: 300;
+            font-size: .8em;
+            margin-left: 35px;
         }
     }
 
@@ -165,6 +290,8 @@ body {
         font-size: .9em;
         padding: 20px 5px;
         background: color(mirage);
+        margin-top: 10px;
+        width: inherit;
 
         @include desktop {
             font-size: 1.1em;
@@ -275,17 +402,32 @@ body {
 }
 
 .sign-up.div {
-    background: rgba(3, 3, 3, 0.79);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 1.5em 3.5em;
+    background: color(timberwolf);
+    padding: .7em;
+    @include desktop {
+        padding: 1.5em 3.5em;
+    }
     //margin-top: 50px;
     border-radius: 5px;
 
     .sign-up-text {
-        color: color(magenta);
-        text-decoration: underline;
+        color: color(mirage);
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        //text-decoration: underline;
         text-align: center;
         font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .msg {
+        color: color(mirage);
+        font-size: .8em;
+    }
+
+    .tutors-btn {
+        background-color: color(denim);
+        color: color(pampas);
+        border-color: color(mirage);
     }
 }
 
@@ -348,6 +490,7 @@ body {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+
     .msg {
         margin-top: 20px;
         color: color(white);
@@ -363,3 +506,22 @@ body {
     box-shadow: 15px 25px 25px rgba(0, 0, 0, 0.25);
     text-decoration: none;
 }
+
+.panel {
+    //display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+

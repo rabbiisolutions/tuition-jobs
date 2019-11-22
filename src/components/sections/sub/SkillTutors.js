@@ -5,7 +5,9 @@ import ImageWidget from "../widgets/ImageWidget";
 
 const SkillTutors = () => {
   return (
-      <section id="skill-tutors">
+      <section id="skill-tutors" className="panel">
+        <div className="tag-line">Are teachers of extra-curricular activities. You can earn extra income by teaching your
+          talent/skill/specialization to others</div>
         <ImageWidget
             title={descriptions.sports.title}
             description={descriptions.sports.description}
@@ -20,7 +22,6 @@ const SkillTutors = () => {
             title={descriptions.hobbies.title}
             description={descriptions.hobbies.description}
             list={descriptions.hobbies.list}/>
-        <hr/>
       </section>
   )
 };

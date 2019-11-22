@@ -5,7 +5,7 @@ import SignUpModal from "../../signUpModal";
 
 const PaymentOptions = () => {
   return (
-      <section id="payment-options">
+      <section id="payment-options" className="panel">
         <div id="table">
           <div id="titles">
             <span>{texts.tuitionAreas}</span>
@@ -16,9 +16,10 @@ const PaymentOptions = () => {
           </div>
           <hr/>
           <div id="body">
-            <SignUpModal className="sign-up div" signUpText={texts.signUpLong}/>
+            <SignUpModal className="sign-up div" signUpText={texts.signUpLong} status="hidden"/>
           </div>
         </div>
+        <span className="help">scroll to the right to view more <i className="arrow right"/></span>
       </section>
   )
 };

@@ -1,20 +1,20 @@
 import React from "react";
 import texts from "../../../constants/texts";
-import CanvasWidget from "../widgets/CanvasWidget";
+import CircleWidget from "../widgets/CircleWidget";
 import description from "../../../constants/SignupSteps";
 import ListItem from "../../listItems";
 
 const SignUpToday = () => {
   return (
-      <section>
-        <div>{texts.howToBe}</div>
-        <CanvasWidget title={description.registration.title} paragraph={ListItem(description.registration.paragraph)} step={1}/>
+      <section id="signup-today" className="panel">
+        <div className="title">{texts.howToBe}</div>
+        <CircleWidget title={description.registration.title} paragraph={ListItem(description.registration.paragraph)} step={1}/>
         <hr/>
-        <CanvasWidget title={description.screening.title} paragraph={description.screening.paragraph} step={2}/>
+        <CircleWidget title={description.screening.title} paragraph={description.screening.paragraph} step={2}/>
         <hr/>
-        <CanvasWidget title={description.placement.title} paragraph={description.placement.paragraph} step={3}/>
+        <CircleWidget title={description.placement.title} paragraph={description.placement.paragraph} step={3}/>
         <hr/>
-        <CanvasWidget title={description.evaluation.title} paragraph={description.evaluation.paragraph} step={4}/>
+        <CircleWidget title={description.evaluation.title} paragraph={description.evaluation.paragraph} step={4}/>
       </section>
   );
 };
