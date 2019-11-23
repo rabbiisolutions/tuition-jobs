@@ -7,7 +7,7 @@ const ImageWidget = (props) => {
       <div className="image-widget">
         { props.src ? // add image if src is passed
           <div className="image">
-            <img src={props.src} alt={props.alt}/>
+            <img src={props.src} alt={props.alt} height="160"/>
           </div>
             : ''
         }

@@ -1,15 +1,18 @@
 import React from 'react';
 import SectionsAccordion from "./sectionsAccordion";
+import BackGround from "../../helpers/backGround";
 
 const Main = () => {
   return (
       <main>
-        <section id="banner">
+        <section className={"banner-" + BackGround()}>
           <div id="slogan">Welcome, Umoja ni Nguvu Yetu</div>
         </section>
         <div id="tuition">Tuition Jobs</div>
         <div id="lead">Tap section to expand and view content</div>
-        <SectionsAccordion/>
+        <section className="sections">
+          <SectionsAccordion/>
+        </section>
       </main>
   );
 };
