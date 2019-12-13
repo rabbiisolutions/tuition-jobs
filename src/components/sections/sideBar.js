@@ -47,14 +47,9 @@ class SideBar extends React.Component {
               <a className="menu-item" href="https://rabbii.co.ke/">
                 {texts.menuItems[0]}
               </a>
-              <div className="menu-item" onClick={e => this.servicesToggle(e)}>
+              <a className="menu-item" href="https://catalogue.rabbii.co.ke/">
                 {texts.menuItems[1]}
-              </div>
-              <div className="services hidden">
-                <a className="menu-sub-item" href="#teecha" onClick={e => this.menuHandler(e)}>
-                  {texts.ourServices[0]}
-                </a>
-              </div>
+              </a>
               <a className="menu-item" href="https://about.rabbii.co.ke/">
                 {texts.menuItems[2]}
               </a>
