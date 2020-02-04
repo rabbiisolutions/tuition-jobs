@@ -40,19 +40,19 @@ class NavBar extends React.Component {
             <a className="nav-item" href="https://rabbii.co.ke/">
               {texts.menuItems[0]}
             </a>
-            <a className="nav-item" href="https://catalogue.rabbii.co.ke/">
+            <a className="nav-item" href="https://payment.rabbii.co.ke/">
               {texts.menuItems[1]}
             </a>
-            <a className="nav-item" href="https://about.rabbii.co.ke/">
+            <a className="nav-item active" href="#">
               {texts.menuItems[2]}
             </a>
-            <a className="nav-item"  href="https://faqs.rabbii.co.ke/">
+            <a className="nav-item"  href="https://about.rabbii.co.ke/">
               {texts.menuItems[3]}
             </a>
-            <a className="nav-item" href="https://faqs.rabbii.co.ke/#contacts">
+            <a className="nav-item" href="https://trending.rabbii.co.ke/">
               {texts.menuItems[4]}
             </a>
-            <a className="nav-item" href="https://trending.rabbii.co.ke/">
+            <a className="nav-item" href="https://faqs.rabbii.co.ke/">
               {texts.menuItems[5]}
             </a>
         </span>
